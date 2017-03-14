@@ -1,9 +1,7 @@
 <subsystem_definition>
     <ports>
-        <in name="velma_core_cs_ve_head_Command"        type="velma_core_ve_head_re_head_msgs::Command"     side="top"      ipc="true"  short_name="cmd" />
-        <in name="velma_core_ve_head_re_head_Status"    type="velma_core_ve_head_re_head_msgs::Status"      side="bottom"   ipc="false" short_name="st" />
-        <out name="velma_core_ve_head_re_head_Command"  type="velma_core_ve_head_re_head_msgs::Command"     side="bottom"   ipc="false"/>
-        <out name="velma_core_cs_ve_head_Status"        type="velma_core_ve_head_re_head_msgs::Status"      side="top"      ipc="true"/>
+        <in alias="hi_cmd"      type="velma_core_ve_head_re_head_msgs::Command"     side="top"      ipc="true" />
+        <out alias="hi_st"      type="velma_core_ve_head_re_head_msgs::Status"      side="top"      ipc="true"/>
     </ports>
     <errors>
         <err name="INV_CMD" />
@@ -11,8 +9,7 @@
         <err name="INV_ST" />
     </errors>
     <states>
-        <state name="state_velma_core_ve_head_transparent" />
-        <initial_state name="state_velma_core_ve_head_safe" />
+        <initial_state name="state_velma_core_ve_head_transparent" />
     </states>
     <activity period="0.001" />
 
