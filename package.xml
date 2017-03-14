@@ -1,0 +1,44 @@
+<package>
+  <name>velma_core_ve_head</name>
+  <version>0.1.1</version>
+  <license>BSD</license>
+  <maintainer email="dawid.seredynski@gmail.com">Dawid Seredynski</maintainer>
+  <description>
+    velma_core_ve_head
+  </description>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <!-- Build deps are queried automatically with orocos_use_package() -->
+  <build_depend>rtt</build_depend>
+  <build_depend>ocl</build_depend>
+  <build_depend>rtt_ros</build_depend>
+  <build_depend>rtt_rosclock</build_depend>
+  <build_depend>velma_core_ve_head_re_head_msgs</build_depend>
+  <build_depend>common_interfaces</build_depend>
+  <build_depend>common_behavior</build_depend>
+  <build_depend>kuka_lwr_fri</build_depend>
+  <build_depend>eigen_conversions</build_depend>
+  <build_depend>rtt_velma_core_ve_head_re_head_subsystem_ports</build_depend>
+  <build_depend>rtt_subsystem_ports</build_depend>
+
+
+  <run_depend>rtt</run_depend>
+  <run_depend>ocl</run_depend>
+  <run_depend>rtt_ros</run_depend>
+  <run_depend>velma_core_ve_head_re_head_msgs</run_depend>
+  <run_depend>rtt_velma_core_ve_head_re_head_subsystem_ports</run_depend>
+
+  <!-- ROS Msg Typekits and Srv Proxies -->
+  <build_depend>rtt_std_msgs</build_depend>
+  <run_depend>rtt_std_msgs</run_depend>
+
+  <export>
+    <rtt_ros>
+      <!-- Plugin deps are loaded automatically by the rtt_ros import service -->
+      <plugin_depend>rtt_std_msgs</plugin_depend>
+      <plugin_depend>velma_data_conversions</plugin_depend>
+      <plugin_depend>rtt_velma_core_ve_head_re_head_subsystem_ports</plugin_depend>
+    </rtt_ros>
+  </export>
+</package>
