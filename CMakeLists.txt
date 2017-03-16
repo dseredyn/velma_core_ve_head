@@ -39,7 +39,7 @@ include_directories(${USE_OROCOS_INCLUDE_DIRS} include)
 ros_generate_rtt_master()
 
 orocos_component(velma_core_ve_head
-    src/behavior_transparent.cpp
+#    src/behavior_transparent.cpp
     src/velma_core_ve_head.cpp
 )
 target_link_libraries(velma_core_ve_head ${catkin_LIBRARIES} ${USE_OROCOS_LIBRARIES} rtt-${PROJECT_NAME}-master)

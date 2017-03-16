@@ -8,8 +8,19 @@
         <err name="NO_CMD" />
         <err name="INV_ST" />
     </errors>
+
+    <predicates>
+    </predicates>
+
     <states>
-        <initial_state name="state_velma_core_ve_head_transparent" />
+        <state name="transparent" is_initial="true" behavior="transparent"
+            init_cond="FALSE"
+        />
+        <behavior name="transparent" 
+            stop_cond="FALSE"
+            err_cond="FALSE" >
+        </behavior>
+
     </states>
     <activity period="0.001" />
 
